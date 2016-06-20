@@ -1,0 +1,15 @@
+<?php
+  session_start();
+  require_once("includes/declarations.php");
+  require_once("includes/validations.php");
+  require_once("includes/classes/class.upload.php");
+  require_once("includes/functions.php");
+  require_once("includes/categories.php");
+  require_once("includes/publishers.php");
+  require_once("includes/authors.php");
+  require_once("includes/books.php");
+  require_once("includes/sales.php");
+  require_once("includes/users.php");
+  get_configuration();
+  validate_user();
+?>

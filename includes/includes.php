@@ -1,0 +1,10 @@
+<?php 
+ob_start();
+session_start();
+  require_once("includes/declarations.php");
+  require_once("includes/validations.php");
+  require_once("includes/classes/class.upload.php");
+  require_once("includes/functions.php");
+  require_once("includes/lists.php");
+  get_configuration();
+?>
