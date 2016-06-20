@@ -11,7 +11,7 @@
       <div id="inner_content">
         <h2>Order Detail</h2>
         <?php if(isset($_GET['sale_id']) && intval($_GET['sale_id']) > 0) { ?>
-					<?php $sale = get_sale($_GET['sale_id']); view_array($sale); ?>
+					<?php $sale = get_sale($_GET['sale_id']);?>
 					<h3>Customer Detail</h3>
 					<table id="rounded-corner">
 						<tr><th width="20%"><strong>Name</strong></th><td><?php echo $sale['customer_name'] ?></td></tr>
