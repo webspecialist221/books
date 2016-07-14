@@ -5,7 +5,7 @@
   define("DB_DATABASE_NAME",  "pak_books");
 
   define("ADMIN_EMAIL",       "nahyan@devhub.pk");
-  define("CLIENT_NAME",        "Pak Books");
+  define("CLIENT_NAME",        "Old Books");
 
   define("SALT",              "^=eAqdDReo1lDN9gKA=+QrS~qDsXr0-6%0%6A_ R|hc5J_IP*T_D-lbAVZki"); // USED FOR ADDING A BIT OF SALT TO OUR PASSWORDS
 

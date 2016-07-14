@@ -6,7 +6,7 @@
         <img src="css/images/slider1.png" alt="slider images" />
         <div class="caption">
           <img src="css/images/mega-sale.png" alt="Mega Sale Sign" />
-          <p>Pak Books shopping center</p>
+          <p>Old Books shopping center</p>
           <a title="Order Now!" class="order-button" href="#">order now</a>
         </div>
       </li>
@@ -14,7 +14,7 @@
         <img src="css/images/slider2.png" alt="slider images" />
         <div class="caption">
           <img src="css/images/mega-sale.png" alt="Mega Sale Sign" />
-          <p>Pak Books shopping center</p>
+          <p>Old Books shopping center</p>
           <a title="Order Now!" class="order-button" href="#">order now</a>
         </div>
       </li>
@@ -22,7 +22,7 @@
         <img src="css/images/slider3.png" alt="slider images" />
         <div class="caption">
           <img src="css/images/mega-sale.png" alt="Mega Sale Sign" />
-          <p>pak Books shopping center</p>
+          <p>Old Books shopping center</p>
           <a title="Order Now!" class="order-button" href="#">order now</a>
         </div>
       </li>
@@ -30,7 +30,7 @@
         <img src="css/images/slider4.png" alt="slider images" />
         <div class="caption">
           <img src="css/images/mega-sale.png" alt="Mega Sale Sign" />
-          <p>pak Books shopping center</p>
+          <p>Old Books shopping center</p>
           <a title="Order Now!" class="order-button" href="#">order now</a>
         </div>
       </li>
