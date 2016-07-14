@@ -57,21 +57,20 @@ if(isset($_GET['action'])) {
 									<input type="text" class="form_input" name="book_name" value="<?php if(isset($book['book_name'])) echo $book['book_name']; ?>" required="required" />
 								</div>
 								<div class="form_row">
-									<label for="book_preface">Book Original Price</label>
-									<input type="text" class="form_input" name="original_price" value="<?php if(isset($book['book_preface'])) echo $book['book_preface']; ?>" required="required" />
+									<label for="book_name">Rent</label>
+									<input type="checkbox" id="rent" class="form_input" name="rent" value="1" />
 								</div>
-								<div class="form_row">
+								<div class="form_row price">
+									<label for="book_preface">Book Original Price</label>
+									<input type="text" class="form_input" name="original_price" value="<?php if(isset($book['book_preface'])) echo $book['book_preface']; ?>"  />
+								</div>
+								<div class="form_row price">
 									<label for="book_preface">Book Sale Price</label>
-									<input type="text" class="form_input" name="sale_price" value="<?php if(isset($book['book_preface'])) echo $book['book_preface']; ?>" required="required" />
+									<input type="text" class="form_input" name="sale_price" value="<?php if(isset($book['book_preface'])) echo $book['book_preface']; ?>"  />
 								</div>
 								<div class="form_row">
 									<label for="author_id">Book Author</label>
-									<select id="author_id" class="form_input" name="author_id" required="required">
-										<option value="">Select Author</option>
-										<?php foreach($authors as $key => $author) { ?>
-										<option value="<?php echo $author['author_id']; ?>" <?php if(isset($author['author_id']) && isset($book['author_id']) && $author['author_id'] == $book['author_id']) echo "selected='selected'"; ?>><?php echo $author['author_name']; ?></option>
-										<?php } ?>
-									</select>
+									<input type="text" class="form_input" name="author" value="<?php if(isset($book['author'])) echo $book['author']; ?>" />
 								</div>
 								<div class="form_row">
 									<label for="category_id">Book Category</label>
@@ -112,6 +111,16 @@ if(isset($_GET['action'])) {
 		</div>
 		<?php require_once("template/footer.php"); ?>
 	</div>
+	<script>
+	$("#rent").click(function(){
+		var rent = $("#rent").val();
+		if($(this).is(':checked')) {
+         $(".price").hide();
+	    } else {
+	        $(".price").show();
+	    }
+	})
+	</script>
 	<script type="text/javascript">
   validate_book();
   function validate_book() {
@@ -138,7 +147,7 @@ if(isset($_GET['action'])) {
 			$target_dir = "images/ads/".$pic;
 			if(move_uploaded_file($tmp, $target_dir))
 			{
-				$query = mysqli_query($conn,"INSERT INTO `ads` (`user_id`, `book_category_id`, `book_name`, `book_auther`, `book_cover`, `book_edition`, `orginal_price`, `sale_price`) VALUES ('$user_id' , '$category_id' , '$book_name' , '$author_id' , '$pic' , '$book_edition' , '$original_price' , '$sale_price')");
+				$query = mysqli_query($conn,"INSERT INTO `ads` (`user_id`, `book_category_id`, `book_name`, `book_auther`, `book_cover`, `book_edition`, `orginal_price`, `sale_price`,`rent`) VALUES ('$user_id' , '$category_id' , '$book_name' , '$author' , '$pic' , '$book_edition' , '$original_price' , '$sale_price','$rent')");
 				if($query)
 				{
 					header("location:post_ad.php?msg=Successfully added");

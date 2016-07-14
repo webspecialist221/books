@@ -11,7 +11,7 @@
 		{
 			$id = $_GET['id'];
 			// echo "select * from `ads` join `users` on ads.user_id=users.user_id where `id`='$id'";
-			$query = mysqli_query($conn , "select * from `ads` join `users` on ads.user_id=users.user_id join `categories` on ads.book_category_id=categories.category_id join `authors` on ads.book_auther=authors.author_id where `id`='$id'");
+			$query = mysqli_query($conn , "select * from `ads` join `users` on ads.user_id=users.user_id join `categories` on ads.book_category_id=categories.category_id  where `id`='$id'");
 			$row = mysqli_fetch_array($query);
 		}
 
@@ -43,13 +43,17 @@
 								<div class="col-md-4 col-md-offset-2">
 									<div class="book_detail">
 										<h3>Category: <?php echo $row['category_name']; ?></h3>
-										<h3>Author: <?php echo $row['author_name']; ?></h3>
+										<h3>Author: <?php echo $row['book_auther']; ?></h3>
 										<h4>Edition: <?php echo $row['book_edition']; ?></h4>
-										<h4>Orginal Price: PKR<?php echo $row['orginal_price']; ?></h4>
-										<h4>Sale Price: PKR<?php echo $row['sale_price']; ?></h4>
 										<h4>Owner Email: <?php echo $row['user_email']; ?></h4>
 										<h4>Owner Phone: <?php echo $row['user_phone']; ?></h4>
 										<h4>Owner Address: <?php echo $row['user_city']; ?> </h4>
+										<?php if($row['rent'] == 1){ ?>
+										<h4 style="color:crimson">Available On Rent</h4>
+										<?php }else{ ?>
+										<h4>Orginal Price: PKR<?php echo $row['orginal_price']; ?></h4>
+										<h4>Sale Price: PKR<?php echo $row['sale_price']; ?></h4>
+										<?php } ?>
 									</div>
 								</div>
 						</div>

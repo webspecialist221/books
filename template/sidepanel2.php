@@ -15,20 +15,7 @@
       </ul>
     </div>
   <?php } ?>
-  <?php $authors = get_authors("LIMIT 10"); ?>
-  <?php if(sizeof($authors) > 0) { ?>
-    <div class="box">
-      <div class="title">
-        <h2>Authors</h2>
-        <img class="bullet" src="css/images/bullet.png" alt="small grey bullet" />
-      </div>
-      <ul>
-        <?php foreach ($authors as $key => $author) { ?>
-            <li><a href="ads_author.php?author_id=<?php echo $author['author_id']; ?>"><?php echo $author['author_name']; ?></a></li>
-        <?php } ?>
-      </ul>
-    </div>
-  <?php } ?>
+  
   <div class="box">
     <div class="title">
       <h2>Follow Us</h2>

@@ -58,12 +58,7 @@ if(isset($_GET['action'])) {
               </div>
               <div class="form_row">
                 <label for="author_id">Book Author</label>
-                <select id="author_id" class="form_input" name="author_id" required="required">
-                  <option value="">Select Author</option>
-                  <?php foreach($authors as $key => $author) { ?>
-                    <option value="<?php echo $author['author_id']; ?>" <?php if(isset($author['author_id']) && isset($book['author_id']) && $author['author_id'] == $book['author_id']) echo "selected='selected'"; ?>><?php echo $author['author_name']; ?></option>
-                  <?php } ?>
-                </select>
+                <input type="text" class="form_input" name="author_id" value="<?php if(isset($book['book_auther'])) echo $book['book_auther']; ?>" required="required" />
               </div>
               <!-- <div class="form_row">
                 <label for="publisher_id">Book Publisher</label>

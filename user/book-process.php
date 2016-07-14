@@ -6,7 +6,7 @@ require("includes/includes.php");
 			'user_id' => $_SESSION['user_id'],
 			'book_category_id'  =>  intval($_POST['category_id']) * 1,
 			'book_name'  =>  $_POST['book_name'],
-			'book_auther'  =>  intval($_POST['author_id']) * 1,
+			'book_auther'  =>  $_POST['author_id'],
 			'book_edition'  =>  $_POST['book_edition'],
 			'orginal_price'  =>  $_POST['book_free'],
 			'sale_price'  =>  $_POST['book_sale']
